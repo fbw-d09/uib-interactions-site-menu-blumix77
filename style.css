@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Play&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Play', sans-serif;
+    font-size: 20px;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    line-height: 40px;
+
+}
+
+li a {
+    display: block;
+}
+
+li a:hover {
+    color: #ffffff;
+}
+
+ul {
+    display: block;
+    list-style: none;
+    height: 160px;
+    width: 400px;
+    background-color: #dbe1e2;
+    box-shadow: 20px 25px 37px 0px rgba(0,0,0,0.6);
+    margin: 20px;
+   
+}
+
+li:nth-child(1) a {
+    border-left: 6px solid #5366c3;    
+}
+
+li:nth-child(2) a {
+    border-left: 6px solid #3f83c0;
+}
+
+li:nth-child(3) a {
+    border-left: 6px solid #2aa1bd;
+}
+
+li:nth-child(4) a {
+    border-left: 6px solid #15bfbb;
+}
+
+li a:hover {
+    animation-name: blend;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-timing-function: linear;
+
+}
+
+@keyframes blend {
+    from {
+        transition: background 3s linear 10ms;
+        width: 0;
+    }
+    to {
+        transition: background 30s ease-out 150ms;
+        width: 100%;
+    }
+} 
+
+li:nth-child(1) a:hover {
+    background: #5366c3;
+}
+
+li:nth-child(2) a:hover {
+    background-color: #3f83c0;
+}
+
+li:nth-child(3) a:hover {
+    background-color: #2aa1bd;
+}
+
+li:nth-child(4) a:hover {
+    background-color: #15bfbb;
+}
+
+
+
