@@ -11,7 +11,8 @@ body {
     box-sizing: border-box;
 }
 
-a {
+a { 
+    width: 100%;
     text-decoration: none;
     color: black;
     line-height: 40px;
@@ -19,7 +20,8 @@ a {
 }
 
 li a {
-    display: block;
+    display: inline-block;
+  /*   width:100%; */
 }
 
 li a:hover {
@@ -27,7 +29,7 @@ li a:hover {
 }
 
 ul {
-    display: block;
+    /* display: block; */
     list-style: none;
     height: 160px;
     width: 400px;
@@ -54,21 +56,30 @@ li:nth-child(4) a {
 }
 
 li a:hover {
+    
     animation-name: blend;
-    animation-duration: 1s;
-    animation-timing-function: ease-in-out;
-    animation-timing-function: linear;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: alternate-reverse;
+
+
 
 }
 
 @keyframes blend {
-    from {
-        transition: background 3s linear 10ms;
+    0% {
+        transition: background 6s ease-out 1ms;
         width: 0;
     }
-    to {
-        transition: background 30s ease-out 150ms;
+    50%{
+        transition: background 6s ease-in 1ms;
+        width:66%;
+    }
+
+    100% {
+        transition: background 6s reverse 5s;
         width: 100%;
+
     }
 } 
 
@@ -88,5 +99,28 @@ li:nth-child(4) a:hover {
     background-color: #15bfbb;
 }
 
+/* li a:hover::after {
+    content:'';
+    animation-name: blend;
+    animation-duration: 1s;
+    animation-timing-function: alternate-reverse;
 
 
+}
+
+@keyframes blend {
+    100% {
+        transition: background 6s ease-out 10ms;
+        width: 100;
+    }
+    50%{
+        transition: background 6s ease-in 10ms;
+        width:66%;
+    }
+
+    0% {
+        transition: background 6s ease-in 150ms;
+        width: 0%;
+
+    }
+ */
