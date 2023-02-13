@@ -1,27 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Play&display=swap');
 
+
 * {
     margin: 0;
     padding: 0;
-}
-
-body {
-    font-family: 'Play', sans-serif;
-    font-size: 20px;
+    font-family:'Play', sans-serif;   
     box-sizing: border-box;
 }
 
-a { 
+body {
+    font-size: 20px;
+}
+
+ul li a { 
     width: 100%;
+    height: 100%;
     text-decoration: none;
     color: black;
     line-height: 40px;
-
+    background-color: transparent;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
 }
 
 li a {
     display: inline-block;
-  /*   width:100%; */
 }
 
 li a:hover {
@@ -29,14 +33,12 @@ li a:hover {
 }
 
 ul {
-    /* display: block; */
     list-style: none;
-    height: 160px;
+    height: 180px;
     width: 400px;
-    background-color: #dbe1e2;
+    background: #dbe1e2;
     box-shadow: 20px 25px 37px 0px rgba(0,0,0,0.6);
-    margin: 20px;
-   
+    margin: 20px;   
 }
 
 li:nth-child(1) a {
@@ -55,16 +57,72 @@ li:nth-child(4) a {
     border-left: 6px solid #15bfbb;
 }
 
-li a:hover {
+.link1:before {
+    content:"";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%; 
+    height: 100%;
+    background: #5366c3;
+    transition: all 2s;
+    z-index: -1;
+}
+
+
+.link2:before {
+    content:"";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%; 
+    height: 100%;
+    background: #3f83c0;
+    transition: all 2s;
+    z-index: -1;
+}
+
+.link3:before {
+    content:"";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%; 
+    height: 100%;
+    background: #2aa1bd;
+    transition: all 2s;
+    z-index: -1;
+}
+
+.link4:before {
+    content:"";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%; 
+    height: 100%;
+    background: #15bfbb;
+    transition: all 2s;
+    z-index: -1;
+}
+
+
+a:hover:before {
+    width: 400px;   
+}
+
+
+
+/* li a {
     
     animation-name: blend;
     animation-duration: 3s;
     animation-iteration-count: infinite;
-    animation-timing-function: alternate-reverse;
-
-
+    animation-timing-function: alternate;
+    animation-play-state: running, paused, running;
 
 }
+
 
 @keyframes blend {
     0% {
@@ -77,7 +135,7 @@ li a:hover {
     }
 
     100% {
-        transition: background 6s reverse 5s;
+        transition: background 6s ease-out -2s;
         width: 100%;
 
     }
@@ -98,14 +156,12 @@ li:nth-child(3) a:hover {
 li:nth-child(4) a:hover {
     background-color: #15bfbb;
 }
-
+ */
 /* li a:hover::after {
     content:'';
     animation-name: blend;
     animation-duration: 1s;
     animation-timing-function: alternate-reverse;
-
-
 }
 
 @keyframes blend {
@@ -122,5 +178,5 @@ li:nth-child(4) a:hover {
         transition: background 6s ease-in 150ms;
         width: 0%;
 
-    }
+}
  */
